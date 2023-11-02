@@ -6,8 +6,8 @@ from ..util import get_logger
 
 class Combiner:
 
-	def __init__(self):
-		self.log = get_logger(__name__)
+	def __init__(self, debug):
+		self.log = get_logger(__name__, debug)
 		self.original_headers = ['Start (s)', 'End (s)', 'Scientific name', 'Common name', 'Confidence']
 		self.new_headers = ['Filename', 'Date', 'Time'] + self.original_headers
 
